@@ -43,6 +43,7 @@
 
   hardware = {
     graphics.enable = true;
+    opengl.enable = true;
     nvidia = {
       modesetting.enable = true;
       open = true;
@@ -78,6 +79,7 @@
 
   programs.hyprland = { 
     enable = true;
+    nvidia.patches = true;
     xwayland.enable = true;
   };
 
@@ -105,22 +107,23 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     brave
+    btop
     clipse
     fzf
     git
+    kitty
     lazygit
+    neofetch
     neovim
     nodejs_22
-    kitty
     python311
     ripgrep
-    sddm-astronaut
     stow
+    tmux
     udiskie
     vim
     wget
     wpaperd
-    tmux
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

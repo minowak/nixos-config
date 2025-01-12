@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [
@@ -6,8 +6,9 @@
     ./kitty
     ./zsh
     ./walker
+    ./nvim
 
-    inputs.walker.homeManagerModules.default;
+    inputs.walker.homeManagerModules.default
   ];
 
   home.username = "minowak";
@@ -27,6 +28,15 @@
   programs.walker = {
     enable = true;
     runAsService = true;
+     config = {
+       search.placeholder = "Example";
+       ui.fullscreen = true;
+       list = {
+         height = 200;
+       };
+       websearch.prefix = "?";
+       switcher.prefix = "/";
+     };
   };
 
   programs.home-manager.enable = true;
