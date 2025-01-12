@@ -8,6 +8,8 @@
   imports =
     [
       ./hardware-configuration.nix
+
+      inputs.hyprpanel.homeManagerModules.hyprpanel
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -79,15 +81,14 @@
 
   programs.hyprland = { 
     enable = true;
-    nvidia.patches = true;
     xwayland.enable = true;
   };
 
-  # programs.hyprpanel = {
-  #   enable = true;
-  #   systemd.enable = true;
-  #   overwrite.enable = true;
-  # };
+  programs.hyprpanel = {
+    enable = true;
+    systemd.enable = true;
+    overwrite.enable = true;
+  };
 
   programs.zsh = {
     enable = true;

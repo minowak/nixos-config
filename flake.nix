@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
     walker.url = "github:abenz1267/walker";
   };
 
@@ -35,7 +36,6 @@
 
             home-manager.users.minowak = import ./home-manager/home.nix;
 	    home-manager.extraSpecialArgs = { inherit inputs; };
-            nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
           }
         ];
       };
