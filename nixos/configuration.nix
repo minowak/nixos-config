@@ -36,7 +36,10 @@
       package = pkgs.kdePackages.sddm;
       enable = true;
       theme = "sddm-astronaut-theme";
-      extraPackages = [ pkgs.sddm-astronaut ];
+      extraPackages = [ 
+        pkgs.sddm-astronaut 
+	pkgs.kdePackages.qt5compat
+      ];
     };
   };
 
@@ -105,6 +108,7 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     brave
+    gcc
     btop
     clipse
     fzf
