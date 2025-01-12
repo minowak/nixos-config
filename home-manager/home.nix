@@ -6,6 +6,8 @@
     ./kitty
     ./zsh
     ./walker
+
+    inputs.walker.homeManagerModules.default;
   ];
 
   home.username = "minowak";
@@ -20,6 +22,11 @@
     enable = true;
     userName = "Michal Nowak";
     userEmail = "minowak@protonmail.ch";
+  };
+
+  programs.walker = {
+    enable = true;
+    runAsService = true;
   };
 
   programs.home-manager.enable = true;

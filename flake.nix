@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    walker.url = "github:abenz1267/walker";
   };
 
   outputs = { 

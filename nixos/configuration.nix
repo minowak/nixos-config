@@ -81,6 +81,12 @@
     xwayland.enable = true;
   };
 
+  # programs.hyprpanel = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   overwrite.enable = true;
+  # };
+
   programs.zsh = {
     enable = true;
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
@@ -90,12 +96,6 @@
     enable = true;
     defaultEditor = true;
   };
-
-  # programs.hyprpanel = {
-  #   enable = true;
-  #   systemd.enable = true;
-  #   overwrite.enable = true;
-  # };
 
   # Hint electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -118,7 +118,6 @@
     stow
     udiskie
     vim
-    walker
     wget
     wpaperd
     tmux
