@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
   };
 
   outputs = { 
@@ -17,14 +17,13 @@
     hyprpanel,
     ... 
   } @ inputs: let
-    inherit (self) outputs;
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
 	specialArgs = {
 	  inherit system; 
-	  inherit inputs outputs; 
+	  inherit inputs; 
 	};
         modules = [
           ./nixos/configuration.nix
@@ -34,8 +33,9 @@
             home-manager.useUserPackages = true;
 
             home-manager.users.minowak = import ./home-manager/home.nix;
+	    home-manager.extraSpecialArgs = { inherit inputs; };
+            nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
           }
-	  {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
         ];
       };
     };

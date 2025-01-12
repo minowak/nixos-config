@@ -5,6 +5,7 @@
     ./hyprland
     ./kitty
     ./zsh
+    ./walker
   ];
 
   home.username = "minowak";

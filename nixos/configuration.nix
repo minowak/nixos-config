@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, ... }:
 
 {
   imports =
@@ -25,23 +25,20 @@
 
   time.timeZone = "Europe/Warsaw";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-
   services.xserver = {
     enable = true;
     videoDrivers = ["nvidia"];
-    displayManager.gdm = {
+  };
+
+  services.displayManager = {
+    defaultSession = "hyprland";
+    sddm = {
+      package = pkgs.kdePackages.sddm;
       enable = true;
-      wayland = true;
+      theme = "sddm-astronaut-theme";
     };
   };
+
 
   hardware = {
     graphics.enable = true;
@@ -93,6 +90,12 @@
     defaultEditor = true;
   };
 
+  # programs.hyprpanel = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   overwrite.enable = true;
+  # };
+
   # Hint electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -107,9 +110,10 @@
     lazygit
     neovim
     nodejs_22
-    pkgs.kitty
+    kitty
     python311
     ripgrep
+    sddm-astronaut
     stow
     udiskie
     vim
