@@ -1,0 +1,55 @@
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+set scrolloff=5
+set hlsearch
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" better indenting
+vmap < <gv
+vmap > >gv
+
+" clear search highlighting
+nmap <esc> :noh<cr><esc>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+map <leader><leader> <Action>(GotoFile)
+map <leader>/ <Action>(FindInPath)
+map <leader>fr <Action>(RecentFiles)
+" This does not work, it stays on screen. How to achieve that? Write my own plugin?
+map <leader>bb <Action>(Switcher)
+map <leader>` <Action>(Switcher)
+map <leader>bd <Action>(CloseContent)
+map <leader>bo <Action>(CloseAllEditorsButActive)
+map <leader>br <Action>(CloseAllToTheRight)
+map <leader>bl <Action>(CloseAllToTheLeft)
+map <leader>bp <Action>(PinActiveEditorTab)
+map <leader>bP <Action>(CloseAllUnpinnedEditors)
+map L <Action>(NextTab)
+map H <Action>(PreviousTab)
+map gcl <Plug>CommentaryLine
+map <leader>cf <Action>(ReformatCode)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cR <Action>(OptimizeImports)
+map <leader>cr <Action>(RenameElement)
+map <leader>w- <Action>(SplitHorizontally)
+map <leader>w<Bar> <Action>(SplitVertically)
+map ]e <Action>(GotoNextError)
+map [e <Action>(GotoPreviousError)
+map gd <Action>(GotoImplementation)
+map gr <Action>(FindUsages)
+map <leader>gg <Action>(LazyGit.Open)
+map s <Action>(flash.search)
+map ]p :pu<CR>
+map [p O<Esc>P

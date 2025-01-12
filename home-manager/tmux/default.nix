@@ -2,6 +2,6 @@
 
 {
   home.file.".tmux.conf" = {
-    source = ./tmux.conf;
+    source = ../../tmux/.tmux.conf;
   };
 }

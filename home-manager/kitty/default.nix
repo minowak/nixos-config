@@ -2,6 +2,6 @@
 
 {
   home.file.".config/kitty/kitty.conf" = {
-    source = ./kitty.conf;
+    source = ../../dotfiles/.config/kitty/kitty.conf;
   };
 }

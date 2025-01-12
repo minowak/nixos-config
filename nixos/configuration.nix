@@ -101,6 +101,7 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     brave
+    clipse
     fzf
     git
     lazygit
@@ -110,9 +111,11 @@
     python311
     ripgrep
     stow
+    udiskie
     vim
     walker
     wget
+    wpaperd
     tmux
   ];
 
