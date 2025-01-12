@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
     walker.url = "github:abenz1267/walker";
   };
 
@@ -20,12 +19,19 @@
     ... 
   } @ inputs: let
     system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [
+        inputs.hyprpanel.overlay
+      ];
+    };
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
 	specialArgs = {
 	  inherit system; 
-	  inherit inputs; 
+	  inherit inputs;
+	  inherit pkgs;
 	};
         modules = [
           ./nixos/configuration.nix

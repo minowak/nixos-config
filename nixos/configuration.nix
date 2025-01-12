@@ -8,8 +8,6 @@
   imports =
     [
       ./hardware-configuration.nix
-
-      inputs.hyprpanel.homeManagerModules.hyprpanel
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -45,7 +43,6 @@
 
   hardware = {
     graphics.enable = true;
-    opengl.enable = true;
     nvidia = {
       modesetting.enable = true;
       open = true;
@@ -84,11 +81,11 @@
     xwayland.enable = true;
   };
 
-  programs.hyprpanel = {
-    enable = true;
-    systemd.enable = true;
-    overwrite.enable = true;
-  };
+  # programs.hyprpanel = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   overwrite.enable = true;
+  # };
 
   programs.zsh = {
     enable = true;
@@ -125,6 +122,8 @@
     vim
     wget
     wpaperd
+    sddm-astronaut
+    hyprpanel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
