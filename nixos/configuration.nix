@@ -36,6 +36,7 @@
       package = pkgs.kdePackages.sddm;
       enable = true;
       theme = "sddm-astronaut-theme";
+      extraPackages = [ pkgs.sddm-astronaut ];
     };
   };
 
