@@ -1,11 +1,7 @@
-{ lib, config, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
-  home.file.".config/hypr/hyprland.conf" = {
-    source = ../../dotfiles/hyprland/.config/hypr/hyprland.conf;
-  };
-
-  programs.hyprland = { 
+  wayland.windowManager.hyprland = { 
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;

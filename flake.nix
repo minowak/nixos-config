@@ -17,36 +17,36 @@
     home-manager,
     hyprpanel,
     ... 
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-      overlays = [
-        inputs.hyprpanel.overlay
-      ];
-    };
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-	specialArgs = {
-	  inherit system; 
-	  inherit inputs;
-	  inherit pkgs;
-	  inherit hyprpanel;
-	};
-        modules = [
-          ./nixos/configuration.nix
-
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.minowak = import ./home-manager/home.nix;
-	    home-manager.extraSpecialArgs = { inherit inputs; };
-          }
+    } @ inputs: let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [
+          inputs.hyprpanel.overlay
         ];
       };
+    in {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit system; 
+            inherit inputs;
+            inherit pkgs;
+            inherit hyprpanel;
+          };
+          modules = [
+            ./nixos/configuration.nix
+
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.users.minowak = import ./home-manager/home.nix;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+            }
+          ];
+        };
+      };
     };
-  };
 }
