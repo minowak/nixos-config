@@ -24,6 +24,8 @@
     source = ./avatar.jpg;
   };
 
+  wayland.windowManager.hyprland.enable = true;
+
   gtk = {
     enable = true;
 

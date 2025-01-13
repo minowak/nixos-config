@@ -2,7 +2,7 @@
 
 {
   home.file.".config/walker/" = {
-    source = ../../dotfiles/walker/.config/walker;
+    source = ./config;
     recursive = true;
   };
   
