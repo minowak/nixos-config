@@ -33,6 +33,7 @@
 	  inherit system; 
 	  inherit inputs;
 	  inherit pkgs;
+	  inherit hyprpanel;
 	};
         modules = [
           ./nixos/configuration.nix

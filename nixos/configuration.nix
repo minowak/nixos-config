@@ -23,6 +23,8 @@
     jetbrains-mono
   ];
 
+  qt.enable = true;
+
   time.timeZone = "Europe/Warsaw";
 
   services.xserver = {
@@ -52,12 +54,8 @@
     };
   };
     
-  # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -84,12 +82,6 @@
     xwayland.enable = true;
   };
 
-  # programs.hyprpanel = {
-  #   enable = true;
-  #   systemd.enable = true;
-  #   overwrite.enable = true;
-  # };
-
   programs.zsh = {
     enable = true;
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
@@ -108,11 +100,13 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     brave
-    gcc
     btop
     clipse
     fzf
+    gcc
     git
+    hyprpanel
+    kdePackages.qt5compat
     kitty
     lazygit
     neofetch
@@ -120,14 +114,14 @@
     nodejs_22
     python311
     ripgrep
+    sddm-astronaut
     stow
     tmux
     udiskie
     vim
     wget
     wpaperd
-    sddm-astronaut
-    hyprpanel
+    xfce.thunar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
