@@ -68,6 +68,7 @@ slider,
 #clear {
   color: @color2;
   opacity: 0.8;
+  visibility: hidden;
   fill: red;
 }
 
@@ -142,8 +143,12 @@ child:hover {
 .activation #activationlabel {
 }
 
+
+.activation #icon {
+  visibility: hidden;
+};
+
 .activation #text,
-.activation #icon,
 .activation #search {
   opacity: 0.5;
 }

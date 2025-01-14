@@ -24,6 +24,7 @@
     gnome-tweaks
     nwg-look
     gnome-themes-extra
+    xdg-user-dirs
   ];
 
   home.file.".avatar.jpg" = {
