@@ -8,7 +8,7 @@
   
   programs.walker = {
     enable = true;
-    runAsService = true;
+    runAsService = false;
     config = {
       search.placeholder = "Example";
       ui.fullscreen = true;

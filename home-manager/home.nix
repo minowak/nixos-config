@@ -20,6 +20,7 @@
     lsd
     yazi
     tokyonight-gtk-theme
+    whitesur-icon-theme
     gnome-tweaks
     nwg-look
     gnome-themes-extra
@@ -55,12 +56,17 @@
     };
 
     iconTheme = {
-      name = "Tokyonight-Dark";
-      package = pkgs.tokyonight-gtk-theme;
+      name ="WhiteSur";
+      package = pkgs.whitesur-icon-theme;
     };
   };
 
-  qt.enable = true;
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+    style.name = "Tokyonight-Dark";
+    style.package = pkgs.tokyonight-gtk-theme;
+  };
 
   xdg.mimeApps = {
     enable = true;
