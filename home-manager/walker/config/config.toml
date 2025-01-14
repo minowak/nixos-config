@@ -74,7 +74,10 @@ hide_category = false
 hide_without_query = true
 
 [builtins.bookmarks]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 placeholder = "Bookmarks"
 name = "bookmarks"
@@ -87,7 +90,10 @@ url = "https://github.com/abenz1267/walker"
 keywords = ["walker", "github"]
 
 [builtins.xdph_picker]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 hidden = true
 weight = 5
 placeholder = "Screen/Window Picker"
@@ -96,7 +102,10 @@ name = "xdphpicker"
 switcher_only = true
 
 [builtins.ai]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 placeholder = "AI"
 name = "ai"
@@ -111,7 +120,10 @@ label = "General Assistant"
 prompt = "You are a helpful general assistant. Keep your answers short and precise."
 
 [builtins.calc]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 require_number = true
 weight = 5
 name = "calc"
@@ -120,7 +132,10 @@ placeholder = "Calculator"
 min_chars = 4
 
 [builtins.windows]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 icon = "view-restore"
 name = "windows"
@@ -128,7 +143,10 @@ placeholder = "Windows"
 show_icon_when_single = true
 
 [builtins.clipboard]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 exec = "wl-copy"
 weight = 5
 name = "clipboard"
@@ -139,7 +157,10 @@ max_entries = 10
 switcher_only = true
 
 [builtins.commands]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 icon = "utilities-terminal"
 switcher_only = true
@@ -147,14 +168,20 @@ name = "commands"
 placeholder = "Commands"
 
 [builtins.custom_commands]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 icon = "utilities-terminal"
 name = "custom_commands"
 placeholder = "Custom Commands"
 
 [builtins.emojis]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 exec = "wl-copy"
 weight = 5
 name = "emojis"
@@ -165,7 +192,10 @@ typeahead = true
 show_unqualified = false
 
 [builtins.symbols]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 after_copy = ""
 weight = 5
 name = "symbols"
@@ -175,7 +205,10 @@ history = true
 typeahead = true
 
 [builtins.finder]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 use_fd = false
 weight = 5
 icon = "file"
@@ -189,7 +222,10 @@ show_icon_when_single = true
 preview_images = false
 
 [builtins.runner]
+<<<<<<< HEAD
 enabled = false
+=======
+>>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
 weight = 5
 icon = "utilities-terminal"
 name = "runner"
