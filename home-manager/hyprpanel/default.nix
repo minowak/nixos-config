@@ -41,7 +41,6 @@
       menus.dashboard = {
         controls.enabled = false;
         stats.enable_gpu = true;
-        powermenu.avatar.image = "$HOME/.avatar.jpg";
         directories = {
           left.directory1.label = "󰉍  Downloads";
           left.directory2.label = "󰉏  Videos";

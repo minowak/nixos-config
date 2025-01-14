@@ -9,6 +9,7 @@
     };
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     walker.url = "github:abenz1267/walker";
+    wpaperd.url = "github:danyspin97/wpaperd";
   };
 
   outputs = { 
@@ -33,7 +34,6 @@
             inherit system; 
             inherit inputs;
             inherit pkgs;
-            inherit hyprpanel;
           };
           modules = [
             ./nixos/configuration.nix

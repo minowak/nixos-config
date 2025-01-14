@@ -11,6 +11,7 @@
 
     inputs.walker.homeManagerModules.default
     inputs.hyprpanel.homeManagerModules.hyprpanel
+    inputs.wpaperd.homeManagerModules.default
   ];
 
   home.username = "minowak";
@@ -27,7 +28,7 @@
     xdg-user-dirs
   ];
 
-  home.file.".avatar.jpg" = {
+  home.file.".face.icon" = {
     source = ./avatar.jpg;
   };
 

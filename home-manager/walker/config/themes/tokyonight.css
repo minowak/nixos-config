@@ -67,9 +67,8 @@ slider,
 
 #clear {
   color: @color2;
-  opacity: 0.8;
+  opacity: 0;
   visibility: hidden;
-  fill: red;
 }
 
 #password,

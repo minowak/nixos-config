@@ -1,6 +1,24 @@
 { lib, pkgs, ... }:
 
 {
+  home.file."$HOME/Pictures/wallpapers" = {
+    source = ./wallpapers;
+    recursive = true;
+  };
+
+  programs.wpaperd = {
+    enable = true;
+    settings = {
+      default = {
+        duration = "30m";
+        mode = "random";
+      };
+      any = {
+        path = "$HOME/Pictures/wallpapers";
+      };
+    };
+  };
+
   wayland.windowManager.hyprland = { 
     enable = true;
     xwayland.enable = true;

@@ -105,7 +105,6 @@
     gdk-pixbuf
     git
     gtk-engine-murrine
-    hyprpanel
     kdePackages.qt5compat
     kitty
     lazygit
