@@ -19,8 +19,7 @@
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   fonts.packages = with pkgs; [ 
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    jetbrains-mono
+    nerdfonts
   ];
 
   qt.enable = true;
@@ -104,6 +103,7 @@
     fzf
     gcc
     git
+    gtk-engine-murrine
     hyprpanel
     kdePackages.qt5compat
     kitty

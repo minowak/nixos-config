@@ -7,6 +7,7 @@
     ./hyprland
     ./hyprpanel
     ./walker
+    ./tmux
 
     inputs.walker.homeManagerModules.default
     inputs.hyprpanel.homeManagerModules.hyprpanel
@@ -18,6 +19,10 @@
   home.packages = with pkgs; [
     lsd
     yazi
+    tokyonight-gtk-theme
+    gnome-tweaks
+    nwg-look
+    gnome-themes-extra
   ];
 
   home.file.".avatar.jpg" = {
@@ -31,7 +36,12 @@
 
     font = {
       name = "JetBrainsMono";
-      size = 14;
+      size = 13;
+    };
+
+    theme = {
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme;
     };
   };
   qt.enable = true;

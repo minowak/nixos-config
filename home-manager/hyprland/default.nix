@@ -15,7 +15,9 @@
             $terminal = kitty
             $fileManager = thunar
             $menu = walker
+            env = XCURSOR_THEME,Default
             env = XCURSOR_SIZE,24
+            env = HYPRCURSOR_THEME,Adwaita
             env = HYPRCURSOR_SIZE,24
             general {
                 gaps_in = 10
@@ -133,8 +135,6 @@
             bind = ${mainMod} SHIFT, 0, movetoworkspace, 10
             bind = ${mainMod}, SPACE, exec, walker
             bind = ${mainMod}, W, exec, wpaperctl next
-            bind = ${mainMod}, S, togglespecialworkspace, magic
-            bind = ${mainMod} SHIFT, S, movetoworkspace, special:magic
             bind = ${mainMod}, mouse_down, workspace, e+1
             bind = ${mainMod}, mouse_up, workspace, e-1
             bindm = ${mainMod}, mouse:272, movewindow
@@ -154,11 +154,6 @@
             windowrulev2 = float, class:(clipse)
             windowrulev2 = size 622 652, class:(clipse)
             bind = ${mainMod}, V, exec, kitty --class clipse -e clipse
-            # exec-once=walker --gapplication-service
-            # exec-once=hyprpanel
-            # exec-once=wpaperd -d
-            # exec-once=clipse -listen
-            # exec-once=udiskie
           ''
         ];
   };

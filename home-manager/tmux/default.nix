@@ -30,6 +30,6 @@
 
         set -g @theme_variation "storm"
         set -g @theme-plugins "yay",weather,datetime";
-      ''
+      '';
   };
 }

@@ -18,7 +18,13 @@
     };
 
     settings = {
-      bar.launcher.autoDetectIcon = true;
+      bar = {
+        launcher.autoDetectIcon = true;
+        workspaces = {
+          show_numbered = true;
+          workspaces = 5;
+        };
+      };
 
       menus.clock = {
         time = {
@@ -28,6 +34,7 @@
         weather = {
           unit = "metric";
           key = "03ac2c97dbf4dfe3f3166ac0fd238765";
+          location = "Krakow";
         };
       };
 
