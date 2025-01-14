@@ -15,7 +15,7 @@
             $terminal = kitty
             $fileManager = thunar
             $menu = walker
-            env = XCURSOR_THEME,Default
+            env = XCURSOR_THEME,Adwaita
             env = XCURSOR_SIZE,24
             env = HYPRCURSOR_THEME,Adwaita
             env = HYPRCURSOR_SIZE,24

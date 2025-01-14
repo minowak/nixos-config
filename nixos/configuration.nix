@@ -102,6 +102,7 @@
     clipse
     fzf
     gcc
+    gdk-pixbuf
     git
     gtk-engine-murrine
     hyprpanel

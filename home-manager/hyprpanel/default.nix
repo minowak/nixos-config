@@ -42,6 +42,14 @@
         controls.enabled = false;
         stats.enable_gpu = true;
         powermenu.avatar.image = "$HOME/.avatar.jpg";
+        directories = {
+          left.directory1.label = "󰉍  Downloads";
+          left.directory2.label = "󰉏  Videos";
+          left.directory3.label = "󰚝  Projects";
+          right.directory1.label = "󱧶  Documents";
+          right.directory2.label = "󰉏  Pictures";
+          right.directory3.label = "󱂵  Home";
+        };
         shortcuts = {
           left = {
             shortcut1 = {
@@ -62,7 +70,8 @@
       };
 
       theme.font = {
-        name ="JetBrainsMono";
+        name = "JetBrainsMono";
+        size = "1rem";
       };
     };
   };

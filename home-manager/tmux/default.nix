@@ -25,11 +25,9 @@
 
         set -gq allow-passthrough on
         set -g status-position top
-        set -g default-terminal "tmux-256color"
-        set -ga terminal-overrides ",xterm-256color:RGB"
 
-        set -g @theme_variation "storm"
-        set -g @theme-plugins "yay",weather,datetime";
+        set -g @tokyo-night-tmux_theme storm
+        set @tokyo-night-tmux_pane_id_style dsquare
       '';
   };
 }

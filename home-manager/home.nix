@@ -29,6 +29,16 @@
     source = ./avatar.jpg;
   };
 
+  home.activation = {
+    init = ''
+      mkdir -p Downloads
+      mkdir -p Documents
+      mkdir -p Videos
+      mkdir -p Music
+      mkdir -p Projects
+      '';
+  };
+
   wayland.windowManager.hyprland.enable = true;
 
   gtk = {
@@ -43,8 +53,22 @@
       name = "Tokyonight-Dark";
       package = pkgs.tokyonight-gtk-theme;
     };
+
+    iconTheme = {
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme;
+    };
   };
+
   qt.enable = true;
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = "thunar.desktop";
+      "inode/folder" = "thunar.desktop";
+    };
+  };
 
   programs.git = {
     enable = true;
