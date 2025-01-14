@@ -30,7 +30,6 @@
     source = ./avatar.jpg;
   };
 
-<<<<<<< HEAD
   home.activation = {
     init = ''
       mkdir -p Downloads
@@ -41,8 +40,6 @@
       '';
   };
 
-=======
->>>>>>> a9a8326447e121cab80ba9d28a41a2e937a454a2
   wayland.windowManager.hyprland.enable = true;
 
   gtk = {
