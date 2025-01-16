@@ -49,6 +49,7 @@ in
         bind - split-window -v
 
         set -g @theme_variation "storm"
+        set -g @theme_transparent_status_bar 'true'
         set -g @menus_trigger \\
 
         set -gq allow-passthrough on

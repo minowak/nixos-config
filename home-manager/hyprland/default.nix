@@ -26,10 +26,10 @@
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       env = [
-        "XCURSOR_THEME,Adwaita"
-        "XCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,Adwaita"
-        "HYPRCURSOR_SIZE,24"
+        "XCURSOR_THEME,Default"
+        "XCURSOR_SIZE,32"
+        "HYPRCURSOR_THEME,Default"
+        "HYPRCURSOR_SIZE,32"
       ];
       general = {
         gaps_in = 10;

@@ -15,19 +15,34 @@
   stylix.enable = true;
   stylix.base16Scheme ="${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
   stylix.image = ./wallpaper.png;
-  stylix.cursor.package = pkgs.rose-pine-cursor;
-  stylix.cursor.name = "BreezeX-RosePine-Linux";
+
+  stylix.fonts = {
+    monospace = {
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+      name = "JetBrainsMono Nerd Font Mono";
+    };
+    sansSerif = {
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+      name = "JetBrainsMono Nerd Font Mono";
+    };
+    serif = {
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+      name = "JetBrainsMono Nerd Font Mono";
+    };
+
+    sizes = {
+      applications = 14;
+      terminal = 14;
+      desktop = 12;
+      popups = 12;
+    };
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-  fonts.packages = with pkgs; [ 
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    jetbrains-mono
-  ];
+  networking.networkmanager.enable = true;
 
   qt.enable = true;
 

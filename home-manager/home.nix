@@ -49,11 +49,6 @@
   gtk = {
     enable = true;
 
-    font = {
-      name = "JetBrainsMono";
-      size = 14;
-    };
-
     iconTheme = {
       name ="WhiteSur";
       package = pkgs.whitesur-icon-theme;
