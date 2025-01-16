@@ -29,7 +29,7 @@
     copyq
   ];
 
-  home.file.".face.icon" = {
+  home.file.".avatar.jpg" = {
     source = ./avatar.jpg;
   };
 
