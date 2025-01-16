@@ -33,7 +33,7 @@
         };
         weather = {
           unit = "metric";
-          key = "03ac2c97dbf4dfe3f3166ac0fd238765";
+          key = "9f50903f6d33401cbb2145130250501";
           location = "Krakow";
         };
       };
