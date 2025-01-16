@@ -14,6 +14,9 @@
 
   stylix.enable = true;
   stylix.base16Scheme ="${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+  stylix.image = ./wallpaper.png;
+  stylix.cursor.package = pkgs.rose-pine-cursor;
+  stylix.cursor.name = "BreezeX-RosePine-Linux";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
