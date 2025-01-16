@@ -79,15 +79,15 @@ top = 8
 
 [ui.window.box.search.prompt]
 name = "prompt"
-icon = "edit-find"
-theme = "tokyonight"
+icon = "edit-find-symbolic"
+theme = ""
 pixel_size = 24
 h_align = "center"
 v_align = "center"
 
 [ui.window.box.search.clear]
 name = "clear"
-icon = "edit-clear"
+icon = "edit-clear-symbolic"
 theme = ""
 pixel_size = 24
 h_align = "center"

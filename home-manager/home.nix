@@ -6,7 +6,7 @@
     ./kitty
     ./hyprland
     ./hyprpanel
-    ./walker
+    ./rofi
     ./tmux
 
     inputs.walker.homeManagerModules.default
@@ -26,6 +26,7 @@
     nwg-look
     gnome-themes-extra
     xdg-user-dirs
+    copyq
   ];
 
   home.file.".face.icon" = {
@@ -49,7 +50,7 @@
 
     font = {
       name = "JetBrainsMono";
-      size = 13;
+      size = 14;
     };
 
     theme = {

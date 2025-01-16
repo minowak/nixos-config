@@ -19,7 +19,8 @@
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   fonts.packages = with pkgs; [ 
-    nerdfonts
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    jetbrains-mono
   ];
 
   qt.enable = true;
@@ -116,7 +117,6 @@
     sddm-astronaut
     stow
     tmux
-    udiskie
     vim
     wget
     wpaperd
