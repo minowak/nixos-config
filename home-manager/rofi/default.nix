@@ -16,7 +16,7 @@
           background-color = mkLiteral "@bg";
           border = mkLiteral "0px";
           kl = mkLiteral "#7aa2f7";
-          black = mkLiteral "#000000";
+          black = mkLiteral "#101014";
           transparent = mkLiteral "rgba(46,52,64,0)";
         };
         "window" = {

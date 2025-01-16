@@ -54,11 +54,6 @@
       size = 14;
     };
 
-    theme = {
-      name = "Tokyonight-Dark";
-      package = pkgs.tokyonight-gtk-theme;
-    };
-
     iconTheme = {
       name ="WhiteSur";
       package = pkgs.whitesur-icon-theme;

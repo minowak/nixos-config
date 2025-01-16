@@ -10,6 +10,7 @@
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     walker.url = "github:abenz1267/walker";
     wpaperd.url = "github:danyspin97/wpaperd";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { 
@@ -37,6 +38,8 @@
           };
           modules = [
             ./nixos/configuration.nix
+
+            inputs.stylix.nixosModules.stylix
 
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;

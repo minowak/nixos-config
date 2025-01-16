@@ -12,6 +12,9 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  stylix.enable = true;
+  stylix.base16Scheme ="${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
