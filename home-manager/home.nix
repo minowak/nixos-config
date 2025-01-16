@@ -25,7 +25,6 @@
     gnome-tweaks
     nwg-look
     gnome-themes-extra
-    xdg-user-dirs
     copyq
   ];
 
@@ -42,6 +41,8 @@
       mkdir -p Projects
       '';
   };
+
+  xdg.userDirs.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
 
