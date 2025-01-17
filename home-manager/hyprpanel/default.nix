@@ -3,7 +3,6 @@
 {
   programs.hyprpanel = {
     enable = true;
-    systemd.enable = true;
     overwrite.enable = true;
     theme = "tokyo_night";
 
