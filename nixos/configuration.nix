@@ -37,6 +37,7 @@
       popups = 12;
     };
   };
+  stylix.polarity = "dark";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -121,7 +122,6 @@
   environment.systemPackages = with pkgs; [
     brave
     btop
-    clipse
     fzf
     gcc
     gdk-pixbuf
@@ -140,7 +140,6 @@
     tmux
     vim
     wget
-    wpaperd
     xfce.thunar
   ];
 

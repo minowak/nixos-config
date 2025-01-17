@@ -1,4 +1,4 @@
-{ config, pkgs, ...} :
+{ lib, config, pkgs, ...} :
 
 {
   programs.rofi = {
@@ -12,6 +12,11 @@
           border = mkLiteral "0px";
           black = mkLiteral "#101014";
           transparent = mkLiteral "rgba(46,52,64,0)";
+          separatorcolor = lib.mkForce (mkLiteral "#2AC3DE");
+          border-color = lib.mkForce (mkLiteral "#2AC3DE");
+          alternate-normal-background = lib.mkForce (mkLiteral "@bg");
+          selected-active-background = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0E}");
+          selected-normal-background = lib.mkForce (mkLiteral "#${config.lib.stylix.colors.base0E}");
         };
         "window" = {
           width = mkLiteral "700";
@@ -67,6 +72,8 @@
         "element-text" = {
           text-color = mkLiteral "inherit";
         };
+        "element selected.active" = {
+        };
         "element selected.normal" = {
           color = mkLiteral "@black";
         };
@@ -78,24 +85,24 @@
           padding = mkLiteral "0 10px 0 0";
         };
         "element-text, element-icon" = {
-        text-color = mkLiteral "inherit";
+          text-color = mkLiteral "inherit";
+        };
+        "element selected active" = {
+          foreground = mkLiteral "@bg";
+        };
+        "button" = {
+          padding = mkLiteral "6px";
+          color = mkLiteral "@primary";
+          horizonatal-align = mkLiteral "0.5";
+          border = mkLiteral "2px 0px 2px 2px";
+          border-radius = mkLiteral "4px 0px 0px 4px";
+        };
+        "button selected normal" = {
+          border = mkLiteral "2px 0px 2px 2px";
+        };
+        "scrollbar" = {
+          enabled = mkLiteral "true";
+        };
       };
-    "element selected active" = {
-      foreground = mkLiteral "@bg";
-    };
-    "button" = {
-      padding = mkLiteral "6px";
-      color = mkLiteral "@primary";
-      horizonatal-align = mkLiteral "0.5";
-      border = mkLiteral "2px 0px 2px 2px";
-      border-radius = mkLiteral "4px 0px 0px 4px";
-    };
-    "button selected normal" = {
-      border = mkLiteral "2px 0px 2px 2px";
-    };
-    "scrollbar" = {
-      enabled = mkLiteral "true";
-    };
-  };
   };
 }

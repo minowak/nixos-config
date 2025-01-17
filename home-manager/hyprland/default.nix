@@ -25,12 +25,6 @@
       monitor = ",preferred,auto,auto";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
-      env = [
-        "XCURSOR_THEME,Default"
-        "XCURSOR_SIZE,32"
-        "HYPRCURSOR_THEME,Default"
-        "HYPRCURSOR_SIZE,32"
-      ];
       general = {
         gaps_in = 10;
         gaps_out = 20;
