@@ -146,7 +146,7 @@
         ''$mod, W, exec, wpaperctl next''
         ''$mod, mouse_down, workspace, e+1''
         ''$mod, mouse_up, workspace, e-1''
-        ''$mod, V, exec, copyq menu''
+        ''$mod, V, exec, copyq toggle''
       ];
       bindm = [
         ''$mod, mouse:272, movewindow''

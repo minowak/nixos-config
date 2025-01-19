@@ -7,6 +7,7 @@
     ./hyprland
     ./hyprpanel
     ./rofi
+    ./copyq
     ./tmux
 
     inputs.walker.homeManagerModules.default
