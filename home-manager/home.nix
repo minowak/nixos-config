@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ lib, inputs, config, pkgs, ... }:
 
 {
   imports = [
@@ -13,6 +13,10 @@
     inputs.hyprpanel.homeManagerModules.hyprpanel
     inputs.wpaperd.homeManagerModules.default
   ];
+
+  # Just in case - override stylix image
+  services.hyprpaper.enable = lib.mkForce false; 
+  stylix.targets.hyprpaper.enable = lib.mkForce false;
 
   home.username = "minowak";
   home.homeDirectory = "/home/minowak";
@@ -75,8 +79,6 @@
     userName = "Michal Nowak";
     userEmail = "minowak@protonmail.ch";
   };
-
-  programs.wpaperd.enable = true;
 
   programs.home-manager.enable = true;
   home.stateVersion = "24.11";

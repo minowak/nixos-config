@@ -9,10 +9,10 @@
   programs.wpaperd = {
     enable = true;
     settings = {
-      default = {
-        duration = "30m";
-        sorting = "random";
-        path = "/home/minowak/Pictures/wallpapers";
+      any = {
+        duration = lib.mkForce "30m";
+        sorting = lib.mkForce "random";
+        path = lib.mkForce "/home/minowak/Pictures/wallpapers";
       };
     };
   };
