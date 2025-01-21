@@ -6,7 +6,7 @@
     ./kitty
     ./hyprland
     ./hyprpanel
-    ./rofi
+    ./wofi
     ./copyq
     ./tmux
 

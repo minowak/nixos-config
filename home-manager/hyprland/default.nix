@@ -108,7 +108,7 @@
       };
       bind = let
         fileManager = "thunar";
-        menu = "rofi -show drun -show-icons";
+        menu = "wofi -show drun -show-icons";
       in [
         ''$mod, Q, exec, $terminal''
         ''$mod, C, killactive,''
