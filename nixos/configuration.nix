@@ -33,8 +33,8 @@
     sizes = {
       applications = 14;
       terminal = 14;
-      desktop = 12;
-      popups = 12;
+      desktop = 14;
+      popups = 14;
     };
   };
   stylix.polarity = "dark";

@@ -108,7 +108,7 @@
       };
       bind = let
         fileManager = "thunar";
-        menu = "wofi -show drun -show-icons";
+        menu = "wofi --show drun --allow-images";
       in [
         ''$mod, Q, exec, $terminal''
         ''$mod, C, killactive,''
