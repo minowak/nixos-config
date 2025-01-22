@@ -22,7 +22,7 @@
     enable = true;
     xwayland.enable = true;
     settings = {
-      monitor = ",preferred,auto,auto";
+      monitor = "DP-1,preferred,auto,auto";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       general = {
@@ -106,6 +106,13 @@
           name = "epic-mouse-v1";
           sensitivity = -0.5;
       };
+      workspace = [
+        "1, monitor:DP-1"
+        "2, monitor:DP-1"
+        "3, monitor:DP-1"
+        "4, monitor:DP-1"
+        "5, monitor:DP-1"
+      ];
       bind = let
         fileManager = "thunar";
         menu = "wofi --show drun --allow-images";

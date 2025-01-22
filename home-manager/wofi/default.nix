@@ -5,6 +5,7 @@
     enable = true;
     settings = {
       no_actions = true;
+      prompt = "Search...";
     };
     style = lib.mkForce ''
       @define-color rosewater #f7768e;

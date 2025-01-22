@@ -4,9 +4,10 @@
 
   home.packages = with pkgs; [
     oh-my-zsh
-    zsh-powerlevel10k
     zsh-fzf-history-search
   ];
+
+  programs.starship.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -27,7 +28,6 @@
 
     initExtra = ''
       source ${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -37,6 +37,8 @@
         fi
         rm -f -- "$tmp"
       }
+
+      eval "$(starship init zsh)"
     '';
   };
 

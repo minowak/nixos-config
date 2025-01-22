@@ -9,7 +9,7 @@
     layout = {
       "bar.layouts" = {
         "*" = {
-          left = [ "dashboard" "workspaces" ];
+          left = [ "dashboard" "workspaces" "windowtitle" ];
           middle = [ "media" ];
           right = [ "systray" "volume" "network" "clock" "notifications" ];
         };
@@ -19,10 +19,6 @@
     settings = {
       bar = {
         launcher.autoDetectIcon = true;
-        workspaces = {
-          show_numbered = true;
-          workspaces = 5;
-        };
       };
 
       menus.clock = {
