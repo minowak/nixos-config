@@ -25,12 +25,13 @@
   home.packages = with pkgs; [
     lsd
     yazi
-    tokyonight-gtk-theme
     whitesur-icon-theme
     gnome-tweaks
     nwg-look
     gnome-themes-extra
     copyq
+    nwg-dock-hyprland
+    gtk-layer-shell
   ];
 
   home.file.".avatar.jpg" = {

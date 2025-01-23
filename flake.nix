@@ -11,7 +11,7 @@
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
     walker.url = "github:abenz1267/walker";
     wpaperd.url = "github:danyspin97/wpaperd";
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix?rev=e00ed7e7f4b828f8b12c5056a6167890e59854ce";
   };
 
   outputs = { 

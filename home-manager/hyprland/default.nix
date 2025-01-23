@@ -1,7 +1,11 @@
 { lib, pkgs, ... }:
 
 {
-  home.file."Pictures/wallpapers" = {
+  imports = [
+    ./dock
+  ];
+
+  home.file."pictures/wallpapers" = {
     source = ./wallpapers;
     recursive = true;
   };
@@ -22,12 +26,12 @@
     enable = true;
     xwayland.enable = true;
     settings = {
-      monitor = "DP-1,preferred,auto,auto";
+      monitor = "DP-1,preferred,auto,1";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       general = {
         gaps_in = 10;
-        gaps_out = 20;
+        gaps_out = "20,20,110,20";
         border_size = 3;
         allow_tearing = false;
         layout = "dwindle";
@@ -184,6 +188,7 @@
         ''copyq --start-server''
         ''hyprpanel''
         ''wpaperd -d''
+        ''nwg-dock-hyprland -r -mb 10''
       ];
     };
   };

@@ -38,6 +38,9 @@ in
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.sensible
       tmuxPlugins.logging
+      tmuxPlugins.prefix-highlight
+      tmux-menus
+      tmux-power
     ];
 
     extraConfig =
@@ -57,8 +60,8 @@ in
         set -g status-position top
 
         run-shell ${pkgs.tmuxPlugins.prefix-highlight}/share/tmux-plugins/prefix-highlight/prefix_highlight.tmux
-        run-shell ${pkgs.tmuxPlugins.prefix-highlight}/share/tmux-plugins/power/tmux-power.tmux
-        run-shell ${pkgs.tmuxPlugins.prefix-highlight}/share/tmux-plugins/menus/menus.tmux
+        run-shell ${tmux-menus}/share/tmux-plugins/menus/menus.tmux
+        run-shell ${tmux-power}/share/tmux-plugins/power/tmux-power.tmux
       '';
   };
 }
