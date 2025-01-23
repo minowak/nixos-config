@@ -80,6 +80,15 @@
     enable = true;
     userName = "Michal Nowak";
     userEmail = "minowak@protonmail.ch";
+    aliases = {
+      co = "checkout";
+      st = "status";
+    };
+    extraConfig = {
+      credential.helper = "${
+          pkgs.git.override { withLibsecret = true; }
+        }/bin/git-credential-libsecret";
+    };
   };
 
   programs.home-manager.enable = true;
