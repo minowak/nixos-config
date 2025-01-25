@@ -5,7 +5,7 @@
     ./dock
   ];
 
-  home.file."pictures/wallpapers" = {
+  home.file."Pictures/wallpapers" = {
     source = ./wallpapers;
     recursive = true;
   };
@@ -118,7 +118,7 @@
         "5, monitor:DP-1"
       ];
       bind = let
-        fileManager = "thunar";
+        fileManager = "nautilus";
         menu = "wofi --show drun --allow-images";
       in [
         ''$mod, Q, exec, $terminal''

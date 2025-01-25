@@ -45,7 +45,7 @@
       mkdir -p Videos
       mkdir -p Music
       mkdir -p Projects
-      '';
+    '';
   };
 
   xdg.userDirs.enable = true;
@@ -71,8 +71,10 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "inode/directory" = "thunar.desktop";
-      "inode/folder" = "thunar.desktop";
+      "inode/directory" = "org.gnome.Nautilus.desktop";
+      "inode/folder" = "org.gnome.Nautilus.desktop";
+      "image/png" = "org.gnome.eog.desktop";
+      "image/jpg" = "org.gnome.eog.desktop";
     };
   };
 
@@ -85,9 +87,9 @@
       st = "status";
     };
     extraConfig = {
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
+      credential.helper = "manager";
+      credential."https://github.com".username = "minowak";
+      credential.credentialStore = "cache";
     };
   };
 

@@ -54,6 +54,8 @@
     videoDrivers = ["nvidia"];
   };
 
+  services.gvfs.enable = true;
+
   services.displayManager = {
     defaultSession = "hyprland";
     sddm = {
@@ -128,15 +130,19 @@
   environment.systemPackages = with pkgs; [
     brave
     btop
+    eog
     fzf
     gcc
     gdk-pixbuf
     git
+    git-credential-manager
+    gnome-text-editor
     gtk-engine-murrine
     kdePackages.qt5compat
     kitty
     lazygit
     logiops
+    nautilus
     neofetch
     neovim
     nodejs_22
@@ -147,7 +153,6 @@
     tmux
     vim
     wget
-    xfce.thunar
   ];
 
   environment.etc = {
