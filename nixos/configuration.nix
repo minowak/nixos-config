@@ -147,6 +147,7 @@
     neovim
     nodejs_22
     python311
+    pw-volume
     ripgrep
     sddm-astronaut
     stow

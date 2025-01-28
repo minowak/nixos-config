@@ -30,7 +30,6 @@
     nwg-look
     gnome-themes-extra
     copyq
-    nwg-dock-hyprland
     gtk-layer-shell
   ];
 

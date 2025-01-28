@@ -1,10 +1,6 @@
 { lib, pkgs, ... }:
 
 {
-  imports = [
-    ./dock
-  ];
-
   home.file."Pictures/wallpapers" = {
     source = ./wallpapers;
     recursive = true;
@@ -31,7 +27,7 @@
       "$terminal" = "kitty";
       general = {
         gaps_in = 10;
-        gaps_out = "20,20,110,20";
+        gaps_out = 20;
         border_size = 3;
         allow_tearing = false;
         layout = "dwindle";
@@ -165,8 +161,8 @@
         ''$mod, mouse:273, resizewindow''
       ];
       bindel = [
-        '',XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+''
-        '',XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-''
+        '',XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+''
+        '',XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-''
         '',XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle''
         '',XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle''
         '',XF86MonBrightnessUp, exec, brightnessctl s 10%+''
@@ -188,7 +184,6 @@
         ''copyq --start-server''
         ''hyprpanel''
         ''wpaperd -d''
-        ''nwg-dock-hyprland -r -mb 10''
       ];
     };
   };

@@ -46,7 +46,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.minowak = import ./home-manager/home.nix;
+              home-manager.users.minowak = import ./modules/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
           ];

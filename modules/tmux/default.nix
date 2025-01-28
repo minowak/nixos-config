@@ -9,7 +9,7 @@ let
       src = pkgs.fetchFromGitHub {
         owner = "jaclu";
         repo = "tmux-menus";
-        rev = "76d2b6d76a54d4feef298e8fcfbeb81262d572c3";
+        rev = "06e0d5dc2bfea168daf3351e2c069e85846e817a";
         sha256 = "sha256-fGYJGJLJc2WIMrT2VRrUG/UkpUj/U9AqphEOdYspmlg=";
       };
   };
@@ -38,7 +38,6 @@ in
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.sensible
       tmuxPlugins.logging
-      tmuxPlugins.prefix-highlight
       tmux-menus
       tmux-power
     ];
@@ -53,6 +52,8 @@ in
         set -g @tmux_power_show_user false
         set -g @tmux_power_show_host false
         set -g @tmux_power_theme "colour2"
+        set -g @menus_trigger \
+        set -g @menus_cfg_trigger_key ]
 
         set -g @tmux_power_prefix_highlight_pos 'L'
 
