@@ -4,7 +4,7 @@
   programs.hyprpanel = {
     enable = true;
     overwrite.enable = true;
-    theme = "tokyo_night";
+    theme = "catppuccin_frappe";
 
     layout = {
       "bar.layouts" = {

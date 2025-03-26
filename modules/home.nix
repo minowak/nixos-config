@@ -13,6 +13,7 @@
     inputs.walker.homeManagerModules.default
     inputs.hyprpanel.homeManagerModules.hyprpanel
     inputs.wpaperd.homeManagerModules.default
+    inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
   # Just in case - override stylix image
@@ -58,13 +59,17 @@
       name ="WhiteSur";
       package = pkgs.whitesur-icon-theme;
     };
+
+    # catppuccin = {
+    #   enable = true;
+    #   flavor = "frappe";
+    #   accent = "mauve";
+    # };
   };
 
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "Tokyonight-Dark";
-    style.package = pkgs.tokyonight-gtk-theme;
   };
 
   xdg.mimeApps = {

@@ -1,5 +1,13 @@
 { inputs, config, lib, pkgs, ... }:
 
+let
+  customBackground = ./wallpaper.png;
+  customSddmAstronaut = pkgs.sddm-astronaut.overrideAttrs (oldAttrs: {
+    postInstall = (oldAttrs.postInstall or "") + ''
+        cp ${customBackground} $out/share/sddm/themes/sddm-astronaut-theme/background.png
+      '';
+  });
+in 
 {
   imports =
     [
@@ -9,7 +17,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   stylix.enable = true;
-  stylix.base16Scheme ="${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+  stylix.base16Scheme ="${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
   stylix.image = ./wallpaper.png;
 
   stylix.fonts = {
@@ -63,7 +71,7 @@
       enable = true;
       theme = "sddm-astronaut-theme";
       extraPackages = [ 
-        pkgs.sddm-astronaut 
+        customSddmAstronaut
 	      pkgs.kdePackages.qt5compat
       ];
     };
@@ -130,6 +138,7 @@
   environment.systemPackages = with pkgs; [
     brave
     btop
+    customSddmAstronaut
     eog
     fzf
     gcc
@@ -146,10 +155,9 @@
     neofetch
     neovim
     nodejs_22
-    python311
     pw-volume
+    python311
     ripgrep
-    sddm-astronaut
     stow
     tmux
     vim
