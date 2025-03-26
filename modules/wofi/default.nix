@@ -20,13 +20,13 @@
       @define-color red-rgb rgb(231, 130, 132);
       @define-color lavender #babbf1;
       @define-color lavender-rgb rgb(186, 187, 241);
-      @define-color peach #ef9f76;
+      @define-color peach #81c8be;
       @define-color peach-rgb rgb(239, 159, 118);
       @define-color pink #ea999c;
       @define-color pink-rgb rgb(234, 153, 156);
       @define-color green #a6d189;
       @define-color green-rgb rgb(166, 209, 137);
-      @define-color teal #81c8be;
+      @define-color teal #ef9f76;
       @define-color teal-rgb rgb(129, 200, 190);
       @define-color sky #99d1db;
       @define-color sky-rgb rgb(153, 209, 219);
@@ -128,14 +128,14 @@
 
       #entry:selected {
         background-color: @peach;
-        color: @teal;
+        color: @base;
         border-radius: 5px;
         padding: 10px 5px;
         border: none;
       }
 
       #entry:selected #text {
-        color: @teal;
+        color: @base;
       }
 
       #entry:drop(active) {
