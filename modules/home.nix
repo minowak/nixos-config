@@ -20,6 +20,15 @@
   services.hyprpaper.enable = lib.mkForce false; 
   stylix.targets.hyprpaper.enable = lib.mkForce false;
 
+  services.udiskie = {
+    enable = true;
+    settings = {
+      program_options = {
+        file_manager = "${pkgs.nautilus}/bin/nautilus";
+      };
+    };
+  };
+
   home.username = "minowak";
   home.homeDirectory = "/home/minowak";
 
@@ -59,12 +68,6 @@
       name ="WhiteSur";
       package = pkgs.whitesur-icon-theme;
     };
-
-    # catppuccin = {
-    #   enable = true;
-    #   flavor = "frappe";
-    #   accent = "mauve";
-    # };
   };
 
   qt = {

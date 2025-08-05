@@ -93,6 +93,7 @@ in
     pulse.enable = true;
   };
 
+  services.udisks2.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -130,6 +131,13 @@ in
     flake = "/etc/nixos";
   };
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
+
   # Hint electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -155,11 +163,13 @@ in
     neofetch
     neovim
     nodejs_22
+    eslint
     pw-volume
     python311
     ripgrep
     stow
     tmux
+    unzip
     vim
     wget
   ];

@@ -13,18 +13,6 @@ let
         sha256 = "sha256-fGYJGJLJc2WIMrT2VRrUG/UkpUj/U9AqphEOdYspmlg=";
       };
   };
-  tmux-power = pkgs.tmuxPlugins.mkTmuxPlugin
-  {
-      pluginName="power";
-      version = "e68f9e6";
-      rtpFilePath = "tmux-power.tmux";
-      src = pkgs.fetchFromGitHub {
-        owner = "wfxr";
-        repo = "tmux-power";
-        rev = "e68f9e6fb42cf372c2f17b51edc63abb4f6e9558";
-        sha256 = "sha256-A+GYM+QegeivfwThfZ0vlAt/Lo4dOjnYomucEZNExlM=";
-      };
-  };
 in 
 {
   programs.tmux = {
@@ -38,6 +26,7 @@ in
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.sensible
       tmuxPlugins.logging
+      tmuxPlugins.catppuccin
     ];
 
     extraConfig =
@@ -47,18 +36,13 @@ in
         bind | split-window -h
         bind - split-window -v
 
-        set -g @tmux_power_show_user false
-        set -g @tmux_power_show_host false
-        set -g @tmux_power_theme "colour2"
-
-        set -g @tmux_power_prefix_highlight_pos 'L'
+        set -g @catppuccin_flavor "frappe"
 
         set -gq allow-passthrough on
         set -g status-position top
 
         set -g @menus_trigger m
 
-        run-shell ${tmux-power}/share/tmux-plugins/power/tmux-power.tmux
         run-shell ${tmux-menus}/share/tmux-plugins/menus/menus.tmux
         run-shell ${pkgs.tmuxPlugins.prefix-highlight}/share/tmux-plugins/prefix-highlight/prefix_highlight.tmux
       '';
