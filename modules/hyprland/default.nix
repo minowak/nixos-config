@@ -118,8 +118,8 @@
         fileManager = "nautilus";
         menu = "wofi --show drun --allow-images";
       in [
-        ''$mod, Q, exec, $terminal''
-        ''$mod, C, killactive,''
+        ''$mod, T, exec, $terminal''
+        ''$mod, Q, killactive,''
         ''$mod, M, exit,''
         ''$mod, E, exec, ${fileManager}''
         ''$mod, F, togglefloating,''
