@@ -12,6 +12,7 @@ in
   imports =
     [
       ./hardware-configuration.nix
+      ./activation-scripts.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -48,6 +49,7 @@ in
   };
 
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.editor = false;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
@@ -167,6 +169,7 @@ in
     pw-volume
     python311
     ripgrep
+    sbctl
     stow
     tmux
     unzip
