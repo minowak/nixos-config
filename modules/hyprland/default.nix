@@ -85,8 +85,6 @@
       };
       misc = {
           force_default_wallpaper = -1;
-          # TODO if looks bad use lib.mkDefault
-          # disable_hyprland_logo = false;
       };
       input = {
           kb_layout = "us";

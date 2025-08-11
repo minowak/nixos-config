@@ -71,8 +71,6 @@
 
   qt = {
     enable = true;
-    # TODO if looks bad use lib.mkForce
-    # platformTheme.name = "gtk";
   };
 
   xdg.mimeApps = {
