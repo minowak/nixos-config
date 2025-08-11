@@ -11,9 +11,8 @@
     ./tmux
 
     inputs.walker.homeManagerModules.default
-    inputs.hyprpanel.homeManagerModules.hyprpanel
     inputs.wpaperd.homeManagerModules.default
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   # Just in case - override stylix image
@@ -72,7 +71,8 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    # TODO if looks bad use lib.mkForce
+    # platformTheme.name = "gtk";
   };
 
   xdg.mimeApps = {
@@ -101,5 +101,5 @@
   };
 
   programs.home-manager.enable = true;
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 }

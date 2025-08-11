@@ -3,7 +3,7 @@
 {
   system.activationScripts.signKernel = {
     text = ''
-      for f in /boot/EFI/nixos/*bzImage.efi; do
+      for f in /boot/EFI/systemd/*.efi; do
         echo "Signing $f..."
         ${pkgs.sbsigntool}/bin/sbsign \
           --key /etc/secureboot/db.key \

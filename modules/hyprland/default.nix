@@ -6,7 +6,7 @@
     recursive = true;
   };
 
-  programs.wpaperd = {
+  services.wpaperd = {
     enable = true;
     settings = {
       any = {
@@ -21,7 +21,6 @@
   wayland.windowManager.hyprland = { 
     enable = true;
     xwayland.enable = true;
-    plugins = with pkgs; [ hyprlandPlugins.hyprexpo ];
     settings = {
       monitor = "DP-1,preferred,auto,1";
       "$mod" = "SUPER";
@@ -86,7 +85,8 @@
       };
       misc = {
           force_default_wallpaper = -1;
-          disable_hyprland_logo = false;
+          # TODO if looks bad use lib.mkDefault
+          # disable_hyprland_logo = false;
       };
       input = {
           kb_layout = "us";
@@ -157,7 +157,6 @@
         ''$mod, mouse_down, workspace, e+1''
         ''$mod, mouse_up, workspace, e-1''
         ''$mod, V, exec, copyq toggle''
-        ''$mod, grave, hyprexpo:expo, toggle''
       ];
       bindm = [
         ''$mod, mouse:272, movewindow''
@@ -186,7 +185,7 @@
       exec-once = [
         ''copyq --start-server''
         ''hyprpanel''
-        ''wpaperd -d''
+        # ''wpaperd -d''
       ];
     };
   };

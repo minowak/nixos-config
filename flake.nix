@@ -2,24 +2,24 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
     walker.url = "github:abenz1267/walker";
     wpaperd.url = "github:danyspin97/wpaperd";
-    stylix.url = "github:danth/stylix?rev=e00ed7e7f4b828f8b12c5056a6167890e59854ce";
+    stylix = {
+      url = "github:nix-community/stylix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self, 
     nixpkgs, 
     home-manager,
-    hyprpanel,
     catppuccin,
     ... 
     } @ inputs: let
@@ -27,9 +27,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [
-          inputs.hyprpanel.overlay
-        ];
       };
     in {
       nixosConfigurations = {
@@ -37,7 +34,6 @@
           specialArgs = {
             inherit system; 
             inherit inputs;
-            inherit pkgs;
           };
           modules = [
             ./nixos/configuration.nix

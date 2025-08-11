@@ -1,22 +1,21 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.hyprpanel = {
     enable = true;
-    overwrite.enable = true;
-    theme = "catppuccin_frappe";
+    settings = {
+      # theme = "catppuccin_frappe";
 
-    layout = {
-      "bar.layouts" = {
-        "*" = {
-          left = [ "dashboard" "workspaces" "windowtitle" ];
-          middle = [ "media" ];
-          right = [ "systray" "volume" "network" "clock" "notifications" ];
+      layout = {
+        "bar.layouts" = {
+          "*" = {
+            left = [ "dashboard" "workspaces" "windowtitle" ];
+            middle = [ "media" ];
+            right = [ "systray" "volume" "network" "clock" "notifications" ];
+          };
         };
       };
-    };
 
-    settings = {
       bar = {
         launcher.autoDetectIcon = true;
       };
@@ -64,7 +63,7 @@
         };
       };
 
-      theme.font = {
+      theme.font = lib.mkDefault {
         name = "JetBrainsMono";
         size = "1rem";
       };

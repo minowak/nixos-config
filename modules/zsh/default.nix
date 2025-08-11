@@ -26,7 +26,7 @@
       theme = "robbyrussell";
     };
 
-    initExtra = ''
+    initContent = ''
       source ${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 
       function y() {
