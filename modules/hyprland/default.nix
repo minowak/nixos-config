@@ -183,7 +183,6 @@
       exec-once = [
         ''copyq --start-server''
         ''hyprpanel''
-        # ''wpaperd -d''
       ];
     };
   };

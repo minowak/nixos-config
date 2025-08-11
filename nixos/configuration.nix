@@ -1,13 +1,5 @@
 { inputs, config, lib, pkgs, ... }:
 
-let
-  customBackground = ./wallpaper.png;
-  customSddmAstronaut = pkgs.sddm-astronaut.overrideAttrs (oldAttrs: {
-    postInstall = (oldAttrs.postInstall or "") + ''
-        cp ${customBackground} $out/share/sddm/themes/sddm-astronaut-theme/background.png
-      '';
-  });
-in 
 {
   imports =
     [
@@ -73,13 +65,12 @@ in
       package = pkgs.kdePackages.sddm;
       enable = true;
       theme = "sddm-astronaut-theme";
-      extraPackages = [ 
-        customSddmAstronaut
+      extraPackages = [
+        pkgs.sddm-astronaut
 	      pkgs.kdePackages.qt5compat
       ];
     };
   };
-
 
   hardware = {
     graphics.enable = true;
@@ -149,7 +140,14 @@ in
   environment.systemPackages = with pkgs; [
     brave
     btop
-    customSddmAstronaut
+    (
+      sddm-astronaut.override {
+        embeddedTheme = "purple_leaves";
+        themeConfig = {
+          FontSize = 24;
+        };
+      }
+    )
     eog
     fzf
     gcc
