@@ -46,7 +46,7 @@ in
   stylix.cursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
-    size = 14;
+    size = 22;
   };
 
   boot.loader.systemd-boot.enable = true;

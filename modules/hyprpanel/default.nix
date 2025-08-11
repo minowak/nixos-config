@@ -4,15 +4,16 @@
   programs.hyprpanel = {
     enable = true;
     settings = {
-      # theme = "catppuccin_frappe";
+      theme.font = {
+        name = "JetBrainsMono";
+        size = "1rem";
+      };
 
-      layout = {
-        "bar.layouts" = {
-          "*" = {
-            left = [ "dashboard" "workspaces" "windowtitle" ];
-            middle = [ "media" ];
-            right = [ "systray" "volume" "network" "clock" "notifications" ];
-          };
+      "bar.layouts" = {
+        "*" = {
+          left = [ "dashboard" "workspaces" "windowtitle" ];
+          middle = [ "media" ];
+          right = [ "systray" "volume" "network" "clock" "notifications" ];
         };
       };
 
@@ -61,11 +62,6 @@
             };
           };
         };
-      };
-
-      theme.font = lib.mkDefault {
-        name = "JetBrainsMono";
-        size = "1rem";
       };
     };
   };

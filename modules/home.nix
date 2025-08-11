@@ -12,7 +12,6 @@
 
     inputs.walker.homeManagerModules.default
     inputs.wpaperd.homeManagerModules.default
-    inputs.catppuccin.homeModules.catppuccin
   ];
 
   # Just in case - override stylix image
@@ -66,6 +65,9 @@
     iconTheme = {
       name ="WhiteSur";
       package = pkgs.whitesur-icon-theme;
+    };
+    font = {
+      size = 14;
     };
   };
 
