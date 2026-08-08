@@ -87,13 +87,15 @@
 
   programs.git = {
     enable = true;
-    userName = "Michal Nowak";
-    userEmail = "minowak@protonmail.ch";
-    aliases = {
-      co = "checkout";
-      st = "status";
-    };
-    extraConfig = {
+    settings = {
+      alias = {
+        co = "checkout";
+        st = "status";
+      };
+      user = {
+        name = "Michal Nowak";
+        email = "minowak@protonmail.ch";
+      };
       credential.helper = "manager";
       credential."https://github.com".username = "minowak";
       credential.credentialStore = "cache";
@@ -101,5 +103,5 @@
   };
 
   programs.home-manager.enable = true;
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 }

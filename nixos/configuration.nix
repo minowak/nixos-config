@@ -132,6 +132,10 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  services.tailscale = {
+    enable = true;
+  };
+
   # Hint electron apps to use wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -161,12 +165,11 @@
     lazygit
     logiops
     nautilus
-    neofetch
     neovim
     nodejs_22
     eslint
     pw-volume
-    python311
+    python314
     ripgrep
     sbctl
     stow
@@ -239,6 +242,6 @@
     wantedBy = [ "multi-user.target" ];
   };
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }
 
